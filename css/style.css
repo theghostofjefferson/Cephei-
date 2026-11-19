@@ -1,0 +1,152 @@
+:root {
+  --bg-page: #F4ECD8;
+  --bg-card: #FAF5E8;
+  --bg-card-alt: #FFFFFF;
+  --bg-canvas: #EFE5CE;
+  --ink-primary: #131A2C;
+  --ink-secondary: #3E4A63;
+  --accent-gold: #B59A5B;
+  --accent-gold-strong: #9A7D3A;
+  --accent-coral: #D97742;
+  --border-subtle: rgba(19, 26, 44, 0.12);
+  --border-strong: rgba(19, 26, 44, 0.24);
+  --btn-bg: #131A2C;
+  --btn-ink: #F4ECD8;
+  --btn-hover: #1F2A47;
+  --shadow-card: 0 1px 2px rgba(19, 26, 44, 0.06);
+}
+
+[data-theme="stargaze"] {
+  --bg-page: #0F1524;
+  --bg-card: #161F33;
+  --bg-card-alt: #1C2740;
+  --bg-canvas: #0B101D;
+  --ink-primary: #F4ECD8;
+  --ink-secondary: #B4BDD1;
+  --accent-gold: #D4B46A;
+  --accent-gold-strong: #E4C57B;
+  --accent-coral: #E68550;
+  --border-subtle: rgba(244, 236, 216, 0.11);
+  --border-strong: rgba(244, 236, 216, 0.22);
+  --btn-bg: #D4B46A;
+  --btn-ink: #0F1524;
+  --btn-hover: #E3C67E;
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--ink-primary);
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  transition: background-color 0.35s ease, color 0.35s ease;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: Fraunces, Georgia, serif;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.surface-page { background-color: var(--bg-page); }
+.surface-card {
+  background-color: var(--bg-card);
+  box-shadow: var(--shadow-card);
+  transition: background-color 0.35s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+.surface-alt {
+  background-color: var(--bg-card-alt);
+  transition: background-color 0.35s ease, border-color 0.25s ease;
+}
+.surface-canvas { background-color: var(--bg-canvas); }
+.ink-main { color: var(--ink-primary); }
+.ink-muted { color: var(--ink-secondary); }
+.ink-gold { color: var(--accent-gold-strong); }
+.ink-coral { color: var(--accent-coral); }
+.border-hairline { border-color: var(--border-subtle); }
+.border-medium { border-color: var(--border-strong); }
+
+.btn-primary {
+  background-color: var(--btn-bg);
+  color: var(--btn-ink);
+  transition: transform 0.18s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-primary:hover {
+  background-color: var(--btn-hover);
+}
+
+.btn-secondary {
+  background-color: var(--bg-card-alt);
+  color: var(--ink-primary);
+  border: 1px solid var(--border-strong);
+  transition: transform 0.18s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+.btn-secondary:hover {
+  border-color: var(--accent-gold);
+}
+
+input[type="range"].cool-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--border-strong);
+  outline: none;
+  cursor: pointer;
+}
+input[type="range"].cool-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--accent-coral);
+  border: 3px solid var(--bg-card-alt);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+input[type="range"].cool-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+input[type="range"].cool-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--accent-coral);
+  border: 3px solid var(--bg-card-alt);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.95); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+.animate-pop {
+  animation: popIn 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.uppercase { text-transform: none !important; }
+.tracking-wider, .tracking-widest { letter-spacing: 0 !important; }
+
+.rounded-lg { border-radius: 4px !important; }
+.rounded-md, .rounded { border-radius: 3px !important; }
+.surface-card { box-shadow: none; }
+.backdrop-blur-md, .backdrop-blur-xs { backdrop-filter: none !important; }
+.animate-pop { animation: none; }
+.font-mono { font-family: 'Source Sans 3', system-ui, sans-serif; }
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
