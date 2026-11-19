@@ -3,195 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CEPHEI | Physics and astrophysics for students</title>
-  <meta name="description" content="CEPHEI teaches physics and astrophysics, runs camps at schools and raises awareness about science." />
+  <title>CEPHEI | Physics and astrophysics education</title>
+  <meta name="description" content="CEPHEI teaches physics and astrophysics, runs camps in schools and works to make science part of everyday conversation." />
+  <meta name="theme-color" content="#f4ecd8" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Public+Sans:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/home.css" />
-  <meta name="theme-color" content="#0a1020" />
 </head>
-<body class="home">
+<body>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="index.html" aria-label="CEPHEI home">
+  <header class="masthead">
+    <div class="page masthead-row">
+      <a class="wordmark" href="index.html" aria-label="CEPHEI, home">
         <svg viewBox="0 0 120 120" fill="none" aria-hidden="true">
           <circle cx="60" cy="60" r="46" stroke="currentColor" stroke-width="2.4" />
-          <path d="M 15 74 C 10 56, 39 38, 72 32 C 92 28, 108 33, 106 44" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" />
+          <path d="M 15 74 C 10 56, 39 38, 72 32 C 92 28, 108 33, 106 44" stroke="var(--rust)" stroke-width="2.4" stroke-linecap="round" />
           <line x1="56" y1="30" x2="41" y2="43" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
           <line x1="64" y1="30" x2="77" y2="39" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
           <line x1="39" y1="51" x2="48" y2="75" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
           <line x1="81" y1="47" x2="82" y2="70" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
           <line x1="55" y1="80" x2="76" y2="76" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
-          <path d="M 106 44 C 104 58, 74 76, 40 81 C 23 83, 18 79, 15 74" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" />
-          <circle cx="60" cy="27" r="3.4" fill="var(--accent)" />
-          <circle cx="81" cy="42" r="3.1" fill="var(--accent)" />
-          <circle cx="37" cy="47" r="3.1" fill="var(--accent)" />
-          <circle cx="82" cy="75" r="3.4" fill="var(--accent)" />
-          <circle cx="50" cy="80" r="3.1" fill="var(--accent)" />
+          <path d="M 106 44 C 104 58, 74 76, 40 81 C 23 83, 18 79, 15 74" stroke="var(--rust)" stroke-width="2.6" stroke-linecap="round" />
+          <circle cx="60" cy="27" r="3.4" fill="var(--rust)" />
+          <circle cx="81" cy="42" r="3.1" fill="var(--rust)" />
+          <circle cx="37" cy="47" r="3.1" fill="var(--rust)" />
+          <circle cx="82" cy="75" r="3.4" fill="var(--rust)" />
+          <circle cx="50" cy="80" r="3.1" fill="var(--rust)" />
         </svg>
         <span>CEPHEI</span>
       </a>
-      <button class="menu-btn" id="menu-btn" type="button" aria-controls="menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
-        Menu
-      </button>
+      <p class="descr">Physics and astrophysics education</p>
+      <button class="menu-btn" id="menu-btn" type="button" aria-controls="menu" aria-expanded="false">Menu</button>
     </div>
     <nav class="menu" id="menu" aria-label="Main">
-      <div class="wrap"><a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="programs.html">What we do</a><a href="contact.html">Get in touch</a></div>
+      <div class="page"><a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="programs.html">What we do</a><a href="contact.html">Write to us</a></div>
     </nav>
   </header>
 
 
-  <main>
-    <section class="sky">
-      <div class="sky-art">
-      <svg viewBox="0 0 480 480" aria-hidden="true">
-        <circle class="ring" cx="240" cy="240" r="230" />
-        <circle class="ring" cx="240" cy="240" r="170" />
-        <g class="field">
-          <circle cx="287" cy="144" r="1.0" class="t" style="--o:0.67;--d:0.5s"/>
-          <circle cx="469" cy="466" r="0.9" style="--o:0.45"/>
-          <circle cx="164" cy="372" r="1.8" style="--o:0.72"/>
-          <circle cx="11" cy="5" r="1.2" style="--o:0.68"/>
-          <circle cx="281" cy="109" r="0.6" class="t" style="--o:0.59;--d:4.5s"/>
-          <circle cx="265" cy="214" r="1.9" style="--o:0.58"/>
-          <circle cx="388" cy="221" r="1.2" style="--o:0.49"/>
-          <circle cx="393" cy="66" r="1.7" style="--o:0.69"/>
-          <circle cx="304" cy="50" r="1.0" class="t" style="--o:0.80;--d:2.1s"/>
-          <circle cx="12" cy="421" r="0.8" style="--o:0.54"/>
-          <circle cx="196" cy="104" r="0.8" style="--o:0.31"/>
-          <circle cx="132" cy="391" r="0.9" style="--o:0.60"/>
-          <circle cx="290" cy="421" r="1.4" class="t" style="--o:0.45;--d:2.6s"/>
-          <circle cx="130" cy="467" r="1.2" style="--o:0.64"/>
-          <circle cx="287" cy="225" r="1.3" style="--o:0.49"/>
-          <circle cx="355" cy="59" r="0.9" style="--o:0.69"/>
-          <circle cx="370" cy="1" r="1.3" class="t" style="--o:0.56;--d:3.7s"/>
-          <circle cx="441" cy="407" r="1.0" style="--o:0.38"/>
-          <circle cx="38" cy="296" r="1.9" style="--o:0.81"/>
-          <circle cx="431" cy="148" r="1.1" style="--o:0.75"/>
-          <circle cx="368" cy="33" r="1.0" class="t" style="--o:0.36;--d:4.1s"/>
-          <circle cx="478" cy="186" r="1.3" style="--o:0.66"/>
-          <circle cx="63" cy="131" r="1.8" style="--o:0.41"/>
-          <circle cx="236" cy="325" r="1.5" style="--o:0.47"/>
-          <circle cx="77" cy="41" r="1.5" class="t" style="--o:0.44;--d:4.5s"/>
-          <circle cx="72" cy="351" r="1.9" style="--o:0.39"/>
-          <circle cx="440" cy="442" r="0.8" style="--o:0.70"/>
-          <circle cx="253" cy="235" r="1.0" style="--o:0.59"/>
-          <circle cx="220" cy="329" r="1.1" class="t" style="--o:0.52;--d:3.8s"/>
-          <circle cx="227" cy="311" r="1.9" style="--o:0.32"/>
-          <circle cx="426" cy="236" r="0.9" style="--o:0.43"/>
-          <circle cx="281" cy="451" r="1.0" style="--o:0.71"/>
-          <circle cx="75" cy="202" r="1.6" class="t" style="--o:0.53;--d:0.1s"/>
-          <circle cx="65" cy="72" r="1.7" style="--o:0.49"/>
-          <circle cx="330" cy="134" r="1.1" style="--o:0.59"/>
-          <circle cx="367" cy="350" r="1.4" style="--o:0.67"/>
-          <circle cx="172" cy="51" r="1.0" class="t" style="--o:0.43;--d:2.9s"/>
-          <circle cx="200" cy="466" r="0.8" style="--o:0.51"/>
-          <circle cx="65" cy="355" r="0.9" style="--o:0.26"/>
-          <circle cx="160" cy="270" r="0.8" style="--o:0.48"/>
-          <circle cx="2" cy="407" r="1.4" class="t" style="--o:0.34;--d:2.6s"/>
-          <circle cx="353" cy="71" r="1.4" style="--o:0.60"/>
-          <circle cx="262" cy="80" r="1.4" style="--o:0.61"/>
-          <circle cx="404" cy="158" r="1.8" style="--o:0.40"/>
-          <circle cx="450" cy="314" r="1.7" class="t" style="--o:0.31;--d:0.4s"/>
-          <circle cx="119" cy="420" r="0.9" style="--o:0.66"/>
-          <circle cx="440" cy="264" r="1.7" style="--o:0.37"/>
-          <circle cx="336" cy="114" r="0.7" style="--o:0.73"/>
-          <circle cx="298" cy="163" r="0.9" class="t" style="--o:0.27;--d:4.9s"/>
-          <circle cx="473" cy="444" r="1.9" style="--o:0.34"/>
-          <circle cx="472" cy="145" r="1.3" style="--o:0.55"/>
-          <circle cx="80" cy="40" r="1.2" style="--o:0.45"/>
-          <circle cx="210" cy="383" r="0.9" class="t" style="--o:0.67;--d:0.1s"/>
-          <circle cx="246" cy="42" r="1.1" style="--o:0.80"/>
-          <circle cx="34" cy="316" r="1.5" style="--o:0.66"/>
-          <circle cx="11" cy="263" r="1.8" style="--o:0.30"/>
-          <circle cx="286" cy="66" r="1.7" class="t" style="--o:0.64;--d:3.9s"/>
-          <circle cx="171" cy="52" r="0.8" style="--o:0.26"/>
-          <circle cx="210" cy="154" r="1.3" style="--o:0.62"/>
-          <circle cx="50" cy="161" r="0.8" style="--o:0.59"/>
-          <circle cx="80" cy="19" r="0.7" class="t" style="--o:0.46;--d:3.5s"/>
-          <circle cx="35" cy="268" r="1.0" style="--o:0.33"/>
-          <circle cx="416" cy="149" r="1.2" style="--o:0.65"/>
-          <circle cx="319" cy="164" r="1.3" style="--o:0.68"/>
-          <circle cx="475" cy="188" r="1.4" class="t" style="--o:0.28;--d:3.6s"/>
-          <circle cx="189" cy="257" r="0.7" style="--o:0.45"/>
-          <circle cx="409" cy="326" r="0.6" style="--o:0.70"/>
-          <circle cx="390" cy="231" r="1.8" style="--o:0.82"/>
-          <circle cx="218" cy="470" r="1.3" class="t" style="--o:0.46;--d:0.8s"/>
-          <circle cx="316" cy="122" r="1.7" style="--o:0.48"/>
-        </g>
-        <g class="house"><line x1="240" y1="88" x2="324" y2="148"/><line x1="324" y1="148" x2="328" y2="280"/><line x1="328" y1="280" x2="200" y2="300"/><line x1="200" y1="300" x2="148" y2="168"/><line x1="148" y1="168" x2="240" y2="88"/><circle cx="240" cy="88" r="5.5"/><circle class="halo" cx="240" cy="88" r="13"/><circle cx="324" cy="148" r="4.5"/><circle class="halo" cx="324" cy="148" r="13"/><circle cx="328" cy="280" r="5.5"/><circle class="halo" cx="328" cy="280" r="13"/><circle cx="200" cy="300" r="4.5"/><circle class="halo" cx="200" cy="300" r="13"/><circle cx="148" cy="168" r="4.5"/><circle class="halo" cx="148" cy="168" r="13"/></g>
-        <text x="254" y="78">CEPHEUS</text>
-      </svg>
+  <main id="main">
+    <section class="page opening">
+      <div class="statement">
+        <h1 class="standfirst">CEPHEI teaches <em>physics and astrophysics</em> to students, runs camps in schools, and works to make science an ordinary part of conversation in our community.</h1>
+        <p class="status"><strong>Where things stand.</strong> We are a new group. No dates or locations have been announced yet, and they will be posted here first. Students, parents and teachers are welcome to <a href="contact.html">write to us</a>.</p>
       </div>
-      <div class="wrap">
-        <h1>Look up. <em>Ask why.</em></h1>
-        <p class="lead">CEPHEI teaches physics and astrophysics, runs camps at schools, and works to raise awareness about science in our community.</p>
-        <div class="buttons">
-          <a class="btn" href="programs.html">What we do</a>
-          <a class="btn plain" href="contact.html">Get in touch</a>
-        </div>
-      </div>
+      <figure class="plate">
+        <svg viewBox="0 0 420 470" role="img" aria-labelledby="plate-t plate-d">
+          <title id="plate-t">Chart of the constellation Cepheus</title>
+          <desc id="plate-d">Six stars of Cepheus joined as a five-sided house shape, with Delta Cephei ringed. Axes are right ascension and declination.</desc>
+          <rect class="frame" x="34" y="16" width="352" height="418" stroke-width="1.2"/>
+          <rect class="frame" x="38" y="20" width="344" height="410" stroke-width="0.5"/>
+          <line class="grid-line" x1="34" y1="330.4" x2="386" y2="330.4"/><line class="grid-line" x1="34" y1="196.4" x2="386" y2="196.4"/><line class="grid-line" x1="34" y1="62.4" x2="386" y2="62.4"/><line class="grid-line" x1="335.4" y1="16" x2="335.4" y2="434"/><line class="grid-line" x1="253.6" y1="16" x2="253.6" y2="434"/><line class="grid-line" x1="171.8" y1="16" x2="171.8" y2="434"/><line class="grid-line" x1="90.1" y1="16" x2="90.1" y2="434"/>
+          <line class="tick" x1="34" y1="330.4" x2="41" y2="330.4"/><text class="axis" x="44" y="333.4">+60°</text><line class="tick" x1="34" y1="196.4" x2="41" y2="196.4"/><text class="axis" x="44" y="199.4">+70°</text><line class="tick" x1="34" y1="62.4" x2="41" y2="62.4"/><text class="axis" x="44" y="65.4">+80°</text><line class="tick" x1="335.4" y1="434" x2="335.4" y2="427"/><text class="axis" x="335.4" y="422" text-anchor="middle">21h</text><line class="tick" x1="253.6" y1="434" x2="253.6" y2="427"/><text class="axis" x="253.6" y="422" text-anchor="middle">22h</text><line class="tick" x1="171.8" y1="434" x2="171.8" y2="427"/><text class="axis" x="171.8" y="422" text-anchor="middle">23h</text><line class="tick" x1="90.1" y1="434" x2="90.1" y2="427"/><text class="axis" x="90.1" y="422" text-anchor="middle">0h</text>
+          <line class="link" x1="310.1" y1="295.7" x2="296.3" y2="188.9"/><line class="link" x1="296.3" y1="188.9" x2="118.2" y2="94.2"/><line class="link" x1="118.2" y1="94.2" x2="185.9" y2="247.3"/><line class="link" x1="185.9" y1="247.3" x2="238.8" y2="354.5"/><line class="link" x1="238.8" y1="354.5" x2="310.1" y2="295.7"/>
+          <circle class="star" cx="310.1" cy="295.7" r="4.3"/><circle class="star" cx="296.3" cy="188.9" r="3.0"/><circle class="star" cx="118.2" cy="94.2" r="3.1"/><circle class="star" cx="185.9" cy="247.3" r="2.6"/><circle class="star" cx="238.8" cy="354.5" r="2.8"/>
+          <circle class="var-star" cx="213.9" cy="351.7" r="3.4"/><circle class="var-ring" cx="213.9" cy="351.7" r="9"/>
+          <text class="" x="298.1" y="300.7" text-anchor="end">Alderamin <tspan class="greek">α</tspan></text><text class="" x="306.3" y="192.9" text-anchor="start"><tspan class="greek">β</tspan> Alfirk</text><text class="" x="128.2" y="88.2" text-anchor="start"><tspan class="greek">γ</tspan> Errai</text><text class="" x="194.9" y="241.3" text-anchor="start"><tspan class="greek">ι</tspan></text><text class="" x="248.8" y="374.5" text-anchor="start"><tspan class="greek">ζ</tspan></text><text class="var-label" x="201.9" y="373.7" text-anchor="end"><tspan class="greek">δ</tspan> Cephei</text>
+        </svg>
+        <figcaption><b>Fig. 1.</b> Cepheus, the constellation our name comes from. The ringed star, &delta;&nbsp;Cephei, brightens and fades on a regular cycle of about 5.4 days, and astronomers use stars like it to measure distances. Schematic; positions approximate.</figcaption>
+      </figure>
     </section>
 
-    <section class="section">
-      <div class="wrap">
-        <p class="kicker">What we do</p>
-        <div class="rows">
-          <div class="row">
-            <span class="num">01</span>
-            <h3>Teaching</h3>
-            <p>Classes and workshops on physics and astrophysics. We start from the basics and explain things in plain language.</p>
-            <a class="go" href="programs.html#teaching">Read more</a>
-          </div>
-          <div class="row">
-            <span class="num">02</span>
-            <h3>School camps</h3>
-            <p>We plan to run camps at schools, with hands-on activities and time spent looking at the sky.</p>
-            <a class="go" href="programs.html#camps">Read more</a>
-          </div>
-          <div class="row">
-            <span class="num">03</span>
-            <h3>Awareness</h3>
-            <p>Talks and small public events that show people science is something they can take part in.</p>
-            <a class="go" href="programs.html#awareness">Read more</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <p class="kicker">How far we look</p>
-        <h2 class="read">Astronomy starts with a very big question: how far away is it?</h2>
-        <div class="reach">
-          <div><strong>384,400 km</strong><span>to the Moon</span></div>
-          <div><strong>150&nbsp;million&nbsp;km</strong><span>to the Sun</span></div>
-          <div><strong>4.2&nbsp;light&#8209;years</strong><span>to the next nearest star, Proxima Centauri</span></div>
-          <div><strong>~100,000&nbsp;light&#8209;years</strong><span>across our galaxy, the Milky Way</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="closing">
-      <div class="wrap">
-        <h2>We are just getting started.</h2>
-        <p>No dates or locations are announced yet. If you are a student, a parent or a teacher and want to hear first, send us a message.</p>
-        <div class="buttons">
-          <a class="btn" href="contact.html">Get in touch</a>
-        </div>
+    <section class="page sheet work">
+      <h2 class="margin">The work</h2>
+      <div class="body">
+        <p><span class="run">Teaching.</span> Classes and workshops on physics and astrophysics, starting from the basics and explained in plain language. <a href="programs.html#teaching">Details</a></p>
+        <p><span class="run">School camps.</span> We plan to run camps in schools, with hands-on activities and time spent looking at the sky. <a href="programs.html#camps">Details</a></p>
+        <p><span class="run">Awareness.</span> Talks and small public events that show people science is something they can take part in. <a href="programs.html#awareness">Details</a></p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <div>CEPHEI &middot; Physics and astrophysics education</div>
-      <nav aria-label="Footer"><a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">What we do</a><a href="contact.html">Get in touch</a></nav>
-      <div data-contact-email></div>
+  <footer class="footer">
+    <div class="page">
+      <div class="brandline">CEPHEI &mdash; physics and astrophysics education</div>
+      <nav aria-label="Footer"><a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">What we do</a><a href="contact.html">Write to us</a></nav>
+      <div class="where" data-contact-email></div>
     </div>
   </footer>
 

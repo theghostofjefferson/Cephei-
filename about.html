@@ -5,73 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About | CEPHEI</title>
   <meta name="description" content="Who CEPHEI is, what we aim to do and where our name comes from." />
+  <meta name="theme-color" content="#f4ecd8" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Public+Sans:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="index.html" aria-label="CEPHEI home">
+  <header class="masthead">
+    <div class="page masthead-row">
+      <a class="wordmark" href="index.html" aria-label="CEPHEI, home">
         <svg viewBox="0 0 120 120" fill="none" aria-hidden="true">
           <circle cx="60" cy="60" r="46" stroke="currentColor" stroke-width="2.4" />
-          <path d="M 15 74 C 10 56, 39 38, 72 32 C 92 28, 108 33, 106 44" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" />
+          <path d="M 15 74 C 10 56, 39 38, 72 32 C 92 28, 108 33, 106 44" stroke="var(--rust)" stroke-width="2.4" stroke-linecap="round" />
           <line x1="56" y1="30" x2="41" y2="43" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
           <line x1="64" y1="30" x2="77" y2="39" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
           <line x1="39" y1="51" x2="48" y2="75" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
           <line x1="81" y1="47" x2="82" y2="70" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
           <line x1="55" y1="80" x2="76" y2="76" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
-          <path d="M 106 44 C 104 58, 74 76, 40 81 C 23 83, 18 79, 15 74" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" />
-          <circle cx="60" cy="27" r="3.4" fill="var(--accent)" />
-          <circle cx="81" cy="42" r="3.1" fill="var(--accent)" />
-          <circle cx="37" cy="47" r="3.1" fill="var(--accent)" />
-          <circle cx="82" cy="75" r="3.4" fill="var(--accent)" />
-          <circle cx="50" cy="80" r="3.1" fill="var(--accent)" />
+          <path d="M 106 44 C 104 58, 74 76, 40 81 C 23 83, 18 79, 15 74" stroke="var(--rust)" stroke-width="2.6" stroke-linecap="round" />
+          <circle cx="60" cy="27" r="3.4" fill="var(--rust)" />
+          <circle cx="81" cy="42" r="3.1" fill="var(--rust)" />
+          <circle cx="37" cy="47" r="3.1" fill="var(--rust)" />
+          <circle cx="82" cy="75" r="3.4" fill="var(--rust)" />
+          <circle cx="50" cy="80" r="3.1" fill="var(--rust)" />
         </svg>
         <span>CEPHEI</span>
       </a>
-      <button class="menu-btn" id="menu-btn" type="button" aria-controls="menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
-        Menu
-      </button>
+      <p class="descr">Physics and astrophysics education</p>
+      <button class="menu-btn" id="menu-btn" type="button" aria-controls="menu" aria-expanded="false">Menu</button>
     </div>
     <nav class="menu" id="menu" aria-label="Main">
-      <div class="wrap"><a href="index.html">Home</a><a href="about.html" aria-current="page">About</a><a href="programs.html">What we do</a><a href="contact.html">Get in touch</a></div>
+      <div class="page"><a href="index.html">Home</a><a href="about.html" aria-current="page">About</a><a href="programs.html">What we do</a><a href="contact.html">Write to us</a></div>
     </nav>
   </header>
 
 
-  <main>
-    <section class="page-title">
-      <div class="wrap">
-        <h1>About CEPHEI</h1>
-        <p>Who we are and why we are doing this.</p>
+  <main id="main">
+    <header class="page page-head">
+      <h1>About CEPHEI</h1>
+      <p>Who we are and why we are doing this.</p>
+    </header>
+
+    <section class="page sheet">
+      <h2 class="margin">Our aim</h2>
+      <div class="body">
+        <p>We teach physics and astrophysics to students, run camps in schools, and raise awareness about science wherever we can. We want people to see that these subjects are not only for a few, and that asking questions about the universe is a good place to start.</p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="wrap">
-        <div class="read">
-          <h2>Our aim</h2>
-          <p>We teach physics and astrophysics to students, run camps at schools, and raise awareness about science wherever we can. We want people to see that these subjects are not only for a few, and that asking questions about the universe is a good place to start.</p>
+    <section class="page sheet">
+      <h2 class="margin">The name</h2>
+      <div class="body">
+        <p>Cepheus is a constellation in the northern sky. Its star Delta Cephei brightens and fades in a steady rhythm, and astronomers use stars like it to measure distances in space. We liked the idea of a group that helps people find their way around.</p>
+      </div>
+    </section>
 
-          <h2>The name</h2>
-          <p>Cepheus is a constellation in the northern sky. Its star Delta Cephei brightens and fades in a steady rhythm, and astronomers use stars like it to measure distances in space. We liked the idea of a group that helps people find their way around.</p>
-
-          <h2>The team</h2>
-          <p class="note">Introductions to the people behind CEPHEI will be added here.</p>
-        </div>
+    <section class="page sheet">
+      <h2 class="margin">The people</h2>
+      <div class="body">
+        <p class="note">Introductions to the people behind CEPHEI will be added here.</p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <div>CEPHEI &middot; Physics and astrophysics education</div>
-      <nav aria-label="Footer"><a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">What we do</a><a href="contact.html">Get in touch</a></nav>
-      <div data-contact-email></div>
+  <footer class="footer">
+    <div class="page">
+      <div class="brandline">CEPHEI &mdash; physics and astrophysics education</div>
+      <nav aria-label="Footer"><a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">What we do</a><a href="contact.html">Write to us</a></nav>
+      <div class="where" data-contact-email></div>
     </div>
   </footer>
 
