@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sessions | CEPHEI</title>
+  <meta name="description" content="Dark-sky camps, build-it workshops and pop-up science from CEPHEI. All free." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="antialiased selection:bg-[#D97742]/25">
+
+  <header class="sticky top-0 z-40 border-b border-hairline bg-[var(--bg-page)]/90 backdrop-blur-md transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-18 py-3.5">
+
+        <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+          <svg class="w-10 h-10 shrink-0" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="CEPHEI Logo">
+            <circle cx="60" cy="60" r="46" stroke="currentColor" stroke-width="2.4" />
+            <path d="M 15 74 C 10 56, 39 38, 72 32 C 92 28, 108 33, 106 44" stroke="var(--accent-gold)" stroke-width="2.4" stroke-linecap="round" />
+            <line x1="56" y1="30" x2="41" y2="43" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
+            <line x1="64" y1="30" x2="77" y2="39" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
+            <line x1="39" y1="51" x2="48" y2="75" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
+            <line x1="81" y1="47" x2="82" y2="70" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
+            <line x1="55" y1="80" x2="76" y2="76" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
+            <path d="M 106 44 C 104 58, 74 76, 40 81 C 23 83, 18 79, 15 74" stroke="var(--accent-gold)" stroke-width="2.6" stroke-linecap="round" />
+            <circle cx="60" cy="27" r="3.4" fill="var(--accent-gold)" />
+            <circle cx="81" cy="42" r="3.1" fill="var(--accent-gold)" />
+            <circle cx="37" cy="47" r="3.1" fill="var(--accent-gold)" />
+            <circle cx="82" cy="75" r="3.4" fill="var(--accent-gold)" />
+            <circle cx="50" cy="80" r="3.1" fill="var(--accent-gold)" />
+          </svg>
+          <span class="font-display font-bold text-xl tracking-[0.24em] uppercase ink-main">
+            CEPHEI
+          </span>
+        </a>
+
+        <div class="flex items-center gap-2.5 sm:gap-3">
+          <button
+            id="stargaze-toggle"
+            type="button"
+            role="switch"
+            aria-checked="false"
+            aria-label="Toggle dark mode"
+            class="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-medium surface-alt text-xs font-mono font-medium ink-main hover:border-[var(--accent-gold)] transition-all"
+          >
+            <span id="theme-track" class="relative inline-flex items-center w-8 h-4 rounded-full bg-[#131A2C]/15 transition-colors">
+              <span id="theme-thumb" class="inline-block w-3 h-3 rounded-full bg-[#131A2C] transform translate-x-0.5 transition-transform duration-200"></span>
+            </span>
+            <span id="theme-label" class="hidden sm:inline">Dark mode</span>
+            <span class="sm:hidden">Dark</span>
+          </button>
+
+          <a href="index.html#join" class="hidden sm:inline-flex items-center px-4 py-2 rounded-md text-xs font-semibold tracking-wide btn-primary">
+            Join us
+          </a>
+
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"
+            class="p-2 rounded border border-hairline surface-alt ink-main"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:absolute md:right-8 md:top-full md:w-60 md:border md:border-t-0 md:border-hairline border-t border-hairline surface-card px-5 py-4 space-y-3 text-sm font-medium">
+      <a href="sessions.html" class="mobile-nav-link block py-1.5 ink-main">Sessions</a>
+      <a href="index.html#playground" class="mobile-nav-link block py-1.5 ink-main">Simulations</a>
+      <a href="index.html#join" class="mobile-nav-link block py-1.5 ink-coral font-semibold">Join us</a>
+    </div>
+  </header>
+
+  <section id="explore" class="py-16 sm:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mb-12">
+        <h1 class="font-display font-bold text-3xl sm:text-4xl tracking-tight ink-main mb-3">
+          Three kinds of sessions
+        </h1>
+        <p class="text-base leading-relaxed ink-muted">
+          All of them are free and open to anyone. Pick one and read the details, then join us when you are ready.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <article class="surface-card rounded-lg border border-hairline hover:border-[var(--accent-gold)] p-7 flex flex-col justify-between group">
+          <div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl ink-main mb-3">
+              Dark-sky camps
+            </h3>
+
+            <p class="text-sm leading-relaxed ink-muted mb-6">
+              Overnight telescope sessions away from city lights. We cover finding your way around the sky and taking photos with a phone, and there is a campfire at the end.
+            </p>
+          </div>
+
+          <button
+            type="button"
+            data-program="camps"
+            class="open-program-btn inline-flex items-center gap-2 text-sm font-semibold ink-main group-hover:ink-coral transition-colors pt-3 border-t border-hairline"
+          >
+            <span>More details</span>
+            <span class="transition-transform group-hover:translate-x-1">→</span>
+          </button>
+        </article>
+
+        <article class="surface-card rounded-lg border border-hairline hover:border-[var(--accent-gold)] p-7 flex flex-col justify-between group">
+          <div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl ink-main mb-3">
+              Build-it workshops
+            </h3>
+
+            <p class="text-sm leading-relaxed ink-muted mb-6">
+              Afternoon labs where you build something and take it home: a spectroscope from a CD, a water rocket, or a small orbit simulation in code.
+            </p>
+          </div>
+
+          <button
+            type="button"
+            data-program="workshops"
+            class="open-program-btn inline-flex items-center gap-2 text-sm font-semibold ink-main group-hover:ink-coral transition-colors pt-3 border-t border-hairline"
+          >
+            <span>More details</span>
+            <span class="transition-transform group-hover:translate-x-1">→</span>
+          </button>
+        </article>
+
+        <article class="surface-card rounded-lg border border-hairline hover:border-[var(--accent-gold)] p-7 flex flex-col justify-between group">
+          <div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl ink-main mb-3">
+              Pop-up science
+            </h3>
+
+            <p class="text-sm leading-relaxed ink-muted mb-6">
+              Solar telescopes and tabletop physics demos set up in school yards, parks and plazas. Walk up whenever you like.
+            </p>
+          </div>
+
+          <button
+            type="button"
+            data-program="street"
+            class="open-program-btn inline-flex items-center gap-2 text-sm font-semibold ink-main group-hover:ink-coral transition-colors pt-3 border-t border-hairline"
+          >
+            <span>More details</span>
+            <span class="transition-transform group-hover:translate-x-1">→</span>
+          </button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-hairline py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs ink-muted">
+      <div class="flex items-center gap-2.5">
+        <span class="font-display font-bold tracking-[0.22em] uppercase ink-main">CEPHEI</span>
+        <span>·</span>
+        <span>Nonprofit physics and astronomy group</span>
+      </div>
+      <div class="flex items-center gap-5 font-mono">
+        <a href="sessions.html" class="hover:ink-main">Sessions</a>
+        <a href="index.html#playground" class="hover:ink-main">Simulations</a>
+        <a href="mailto:hello@cephei.org" class="hover:ink-coral">hello@cephei.org</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="program-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-[#0F1524]/75 backdrop-blur-xs" role="dialog" aria-modal="true" aria-labelledby="prog-modal-title">
+    <div class="w-full max-w-lg surface-card rounded-lg border border-medium p-6 sm:p-8 animate-pop max-h-[90vh] overflow-y-auto">
+      <div class="flex items-start justify-between gap-4 mb-4">
+        <div>
+          <span id="prog-modal-tag" class="font-mono text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md bg-[var(--accent-coral)]/15 ink-coral">
+            Weekend · Free
+          </span>
+          <h3 id="prog-modal-title" class="font-display font-bold text-2xl sm:text-3xl ink-main mt-2">
+            Dark-Sky Astro Camps
+          </h3>
+        </div>
+        <button id="prog-modal-close" type="button" aria-label="Close modal" class="w-9 h-9 rounded-md surface-alt border border-hairline flex items-center justify-center ink-main hover:border-[var(--accent-gold)]">
+          ×
+        </button>
+      </div>
+
+      <p id="prog-modal-intro" class="text-sm leading-relaxed ink-muted mb-5">
+        Description here.
+      </p>
+
+      <div class="space-y-4 mb-6">
+        <div class="p-4 rounded-md surface-alt border border-hairline">
+          <div class="font-display font-bold text-sm ink-main mb-2">What we do</div>
+          <ul id="prog-modal-activities" class="space-y-2 text-xs sm:text-sm ink-muted">
+          </ul>
+        </div>
+
+        <div class="p-4 rounded-md bg-[var(--accent-gold)]/15 border border-[var(--accent-gold)]/30">
+          <div class="font-display font-bold text-sm ink-main mb-1">What to bring</div>
+          <p id="prog-modal-bring" class="text-xs sm:text-sm ink-muted">
+            Nothing. We provide telescopes, kits, notebooks and snacks. Bring a warm layer for night sessions.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <button type="button" id="prog-modal-cancel" class="px-4 py-2.5 rounded-md text-xs font-semibold btn-secondary">
+          Close
+        </button>
+        <a href="index.html#join" id="prog-modal-rsvp" class="px-5 py-2.5 rounded-md text-xs font-semibold btn-primary">
+          Join us
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast-pill" class="fixed bottom-5 right-5 z-50 hidden px-4 py-3 rounded-md bg-[#131A2C] text-[#F4ECD8] border border-[#B59A5B] shadow-xl text-xs font-medium flex items-center gap-2.5">
+    <span class="w-2 h-2 rounded-full bg-[#D97742]"></span>
+    <span id="toast-text">Saved!</span>
+  </div>
+
+  <script src="js/theme.js"></script>
+  <script src="js/programs.js"></script>
+</body>
+</html>

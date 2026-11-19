@@ -16,6 +16,7 @@ function showToast(message) {
 }
 
 let isStargaze = false;
+let restoringTheme = false;
 const stargazeBtn = document.getElementById('stargaze-toggle');
 const themeTrack = document.getElementById('theme-track');
 const themeThumb = document.getElementById('theme-thumb');
@@ -51,20 +52,36 @@ stargazeBtn.addEventListener('click', () => {
     themeTrack.style.backgroundColor = 'rgba(212, 180, 106, 0.35)';
     themeThumb.style.backgroundColor = '#D4B46A';
     themeThumb.style.transform = 'translateX(17px)';
-    showToast('Dark mode on');
+    if (!restoringTheme) showToast('Dark mode on');
   } else {
     document.documentElement.removeAttribute('data-theme');
     themeTrack.style.backgroundColor = 'rgba(19, 26, 44, 0.15)';
     themeThumb.style.backgroundColor = '#131A2C';
     themeThumb.style.transform = 'translateX(2px)';
-    showToast('Light mode on');
+    if (!restoringTheme) showToast('Light mode on');
   }
-  drawAllVisible();
+  if (typeof drawAllVisible === 'function') drawAllVisible();
+  try { localStorage.setItem('cephei-theme', isStargaze ? 'dark' : 'light'); } catch (e) {}
 });
 
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
-mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-document.querySelectorAll('.mobile-nav-link').forEach((link) => {
-  link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+mobileMenuBtn.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('hidden') === false;
+  mobileMenuBtn.setAttribute('aria-expanded', String(open));
 });
+document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// Carry the chosen theme over between pages
+try {
+  if (localStorage.getItem('cephei-theme') === 'dark') {
+    restoringTheme = true;
+    stargazeBtn.click();
+    restoringTheme = false;
+  }
+} catch (e) {}
