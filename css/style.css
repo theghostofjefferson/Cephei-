@@ -5,12 +5,15 @@
    once here so they are easy to change. */
 
 :root {
-  --paper: #f4ecd8;
-  --paper-shade: #ece2c9;
-  --ink: #131a2c;
-  --ink-soft: #454e64;
-  --rust: #a9481a;
-  --rule: rgba(19, 26, 44, 0.22);
+  --paper: #f3eee3;
+  --paper-shade: #e9e3d4;
+  --ink: #0e1020;
+  --ink-soft: #40445a;
+  --rust: #c22d04;      /* accent for text: dark enough to read on paper */
+  --signal: #ff4a1c;    /* the bright version, for logo, bars and graphics */
+  --cobalt: #2230e0;
+  --sun: #ffd23f;
+  --rule: rgba(14, 16, 32, 0.22);
 
   --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -39,8 +42,9 @@ h1, h2, h3 { font-weight: 400; margin: 0; }
 p { margin: 0 0 1em; }
 em { font-style: italic; }
 
-a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em; text-decoration-color: var(--rust); }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em; text-decoration-color: var(--signal); }
 a:hover { color: var(--rust); }
+::selection { background: var(--signal); color: var(--ink); }
 :focus-visible { outline: 2px solid var(--rust); outline-offset: 3px; }
 
 .page { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
@@ -50,7 +54,7 @@ a:hover { color: var(--rust); }
 
 /* ---------- Masthead ---------- */
 
-.masthead { border-top: 3px solid var(--ink); border-bottom: 1px solid var(--ink); position: relative; }
+.masthead { border-top: 8px solid var(--signal); border-bottom: 1px solid var(--ink); position: relative; }
 .masthead-row { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: 4.5rem; }
 
 .wordmark { display: inline-flex; align-items: center; gap: 0.85rem; text-decoration: none; color: var(--ink); }
@@ -127,17 +131,18 @@ a:hover { color: var(--rust); }
 .plate figcaption { margin-top: 0.8rem; font-size: 0.9rem; line-height: 1.45; color: var(--ink-soft); }
 .plate figcaption b { font-weight: 500; font-style: italic; color: var(--ink); }
 
-.plate .frame { fill: none; stroke: var(--ink); }
-.plate .grid-line { stroke: var(--ink); opacity: 0.16; stroke-dasharray: 1 4; }
-.plate .tick { stroke: var(--ink); }
-.plate .link { stroke: var(--ink); stroke-width: 1; opacity: 0.7; }
-.plate .star { fill: var(--ink); }
-.plate .var-ring { fill: none; stroke: var(--rust); stroke-width: 1.2; }
-.plate .var-star { fill: var(--rust); }
-.plate text { font-family: var(--serif); font-size: 15px; fill: var(--ink); }
-.plate .axis { font-family: var(--sans); font-size: 10.5px; fill: var(--ink-soft); letter-spacing: 0.04em; }
+.plate .bg { fill: var(--cobalt); }
+.plate .frame { fill: none; stroke: var(--paper); }
+.plate .grid-line { stroke: var(--paper); opacity: 0.22; stroke-dasharray: 1 4; }
+.plate .tick { stroke: var(--paper); }
+.plate .link { stroke: var(--paper); stroke-width: 1; opacity: 0.8; }
+.plate .star { fill: var(--paper); }
+.plate .var-ring { fill: none; stroke: var(--sun); stroke-width: 1.4; }
+.plate .var-star { fill: var(--sun); }
+.plate text { font-family: var(--serif); font-size: 15px; fill: var(--paper); }
+.plate .axis { font-family: var(--sans); font-size: 10.5px; fill: var(--paper); opacity: 0.8; letter-spacing: 0.04em; }
 .plate .greek { font-style: italic; }
-.plate .var-label { fill: var(--rust); }
+.plate .var-label { fill: var(--sun); }
 
 /* ---------- Sections with a margin ---------- */
 
@@ -196,7 +201,7 @@ input:focus, select:focus, textarea:focus { outline: 0; border-color: var(--rust
   border-radius: 0;
   cursor: pointer;
 }
-.send:hover { background: var(--rust); border-color: var(--rust); }
+.send:hover { background: var(--signal); border-color: var(--signal); color: var(--ink); }
 .form-msg { margin-top: 1.2rem; padding: 0.7rem 0 0; border-top: 1px solid var(--ink); font-style: italic; }
 .form-msg[hidden] { display: none; }
 
