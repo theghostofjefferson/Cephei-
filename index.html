@@ -1,619 +1,105 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CEPHEI | Free stargazing and physics for students</title>
-  <meta name="description" content="CEPHEI is a nonprofit student group running free stargazing camps, physics workshops and pop-up telescope stands." />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CEPHEI | Physics and astrophysics for students</title>
+  <meta name="description" content="CEPHEI teaches physics and astrophysics, runs camps at schools and raises awareness about science." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="js/tailwind-config.js"></script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="antialiased selection:bg-[#D97742]/25">
+<body>
 
-  <header class="sticky top-0 z-40 border-b border-hairline bg-[var(--bg-page)]/90 backdrop-blur-md transition-colors duration-300">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-18 py-3.5">
-
-        <a href="#" class="flex items-center gap-3 group focus:outline-none">
-          <svg class="w-10 h-10 shrink-0" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="CEPHEI Logo">
-            <circle cx="60" cy="60" r="46" stroke="currentColor" stroke-width="2.4" />
-            <path d="M 15 74 C 10 56, 39 38, 72 32 C 92 28, 108 33, 106 44" stroke="var(--accent-gold)" stroke-width="2.4" stroke-linecap="round" />
-            <line x1="56" y1="30" x2="41" y2="43" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
-            <line x1="64" y1="30" x2="77" y2="39" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
-            <line x1="39" y1="51" x2="48" y2="75" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
-            <line x1="81" y1="47" x2="82" y2="70" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
-            <line x1="55" y1="80" x2="76" y2="76" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
-            <path d="M 106 44 C 104 58, 74 76, 40 81 C 23 83, 18 79, 15 74" stroke="var(--accent-gold)" stroke-width="2.6" stroke-linecap="round" />
-            <circle cx="60" cy="27" r="3.4" fill="var(--accent-gold)" />
-            <circle cx="81" cy="42" r="3.1" fill="var(--accent-gold)" />
-            <circle cx="37" cy="47" r="3.1" fill="var(--accent-gold)" />
-            <circle cx="82" cy="75" r="3.4" fill="var(--accent-gold)" />
-            <circle cx="50" cy="80" r="3.1" fill="var(--accent-gold)" />
-          </svg>
-          <span class="font-display font-bold text-xl tracking-[0.24em] uppercase ink-main">
-            CEPHEI
-          </span>
-        </a>
-
-        <div class="flex items-center gap-2.5 sm:gap-3">
-          <button
-            id="stargaze-toggle"
-            type="button"
-            role="switch"
-            aria-checked="false"
-            aria-label="Toggle dark mode"
-            class="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-medium surface-alt text-xs font-mono font-medium ink-main hover:border-[var(--accent-gold)] transition-all"
-          >
-            <span id="theme-track" class="relative inline-flex items-center w-8 h-4 rounded-full bg-[#131A2C]/15 transition-colors">
-              <span id="theme-thumb" class="inline-block w-3 h-3 rounded-full bg-[#131A2C] transform translate-x-0.5 transition-transform duration-200"></span>
-            </span>
-            <span id="theme-label" class="hidden sm:inline">Dark mode</span>
-            <span class="sm:hidden">Dark</span>
-          </button>
-
-          <a href="#join" class="hidden sm:inline-flex items-center px-4 py-2 rounded-md text-xs font-semibold tracking-wide btn-primary">
-            Join us
-          </a>
-
-          <button
-            id="mobile-menu-btn"
-            type="button"
-            aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"
-            class="p-2 rounded border border-hairline surface-alt ink-main"
-          >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
-            </svg>
-          </button>
-        </div>
-      </div>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="CEPHEI home">
+        <svg viewBox="0 0 120 120" fill="none" aria-hidden="true">
+          <circle cx="60" cy="60" r="46" stroke="currentColor" stroke-width="2.4" />
+          <path d="M 15 74 C 10 56, 39 38, 72 32 C 92 28, 108 33, 106 44" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" />
+          <line x1="56" y1="30" x2="41" y2="43" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
+          <line x1="64" y1="30" x2="77" y2="39" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
+          <line x1="39" y1="51" x2="48" y2="75" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
+          <line x1="81" y1="47" x2="82" y2="70" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
+          <line x1="55" y1="80" x2="76" y2="76" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
+          <path d="M 106 44 C 104 58, 74 76, 40 81 C 23 83, 18 79, 15 74" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" />
+          <circle cx="60" cy="27" r="3.4" fill="var(--accent)" />
+          <circle cx="81" cy="42" r="3.1" fill="var(--accent)" />
+          <circle cx="37" cy="47" r="3.1" fill="var(--accent)" />
+          <circle cx="82" cy="75" r="3.4" fill="var(--accent)" />
+          <circle cx="50" cy="80" r="3.1" fill="var(--accent)" />
+        </svg>
+        <span>CEPHEI</span>
+      </a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-controls="menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
+        Menu
+      </button>
     </div>
-
-    <div id="mobile-menu" class="hidden md:absolute md:right-8 md:top-full md:w-60 md:border md:border-t-0 md:border-hairline border-t border-hairline surface-card px-5 py-4 space-y-3 text-sm font-medium">
-      <a href="sessions.html" class="mobile-nav-link block py-1.5 ink-main">Sessions</a>
-      <a href="#playground" class="mobile-nav-link block py-1.5 ink-main">Simulations</a>
-      <a href="#join" class="mobile-nav-link block py-1.5 ink-coral font-semibold">Join us</a>
-    </div>
+    <nav class="menu" id="menu" aria-label="Main">
+      <div class="wrap"><a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="programs.html">What we do</a><a href="contact.html">Get in touch</a></div>
+    </nav>
   </header>
 
-  <section class="pt-10 pb-16 sm:pt-14 sm:pb-24">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 
-        <div class="lg:col-span-6 space-y-6">
-          <p class="text-sm ink-muted">A student physics and astronomy group</p>
-
-          <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.08] tracking-tight ink-main">
-            Free stargazing nights and physics workshops, open to anyone.
-          </h1>
-
-          <p class="text-base sm:text-lg leading-relaxed ink-muted max-w-xl">
-            We run overnight stargazing camps, hands-on physics workshops, and small pop-up telescope stands in parks and school yards. You don't need any math background to come.
-          </p>
-
-          <div class="flex flex-wrap items-center gap-3.5 pt-1">
-            <a href="#join" class="inline-flex items-center justify-center px-6 py-3.5 rounded-md text-sm font-semibold btn-primary">
-              Join us
-            </a>
-            <a href="#playground" class="inline-flex items-center justify-center px-6 py-3.5 rounded-md text-sm font-semibold btn-secondary">
-              Try the simulations
-            </a>
-          </div>
-
-          <p class="pt-4 text-sm ink-muted border-t border-hairline">So far we have had over 1,200 students at 18 camps and star nights. Everything is free.</p>
-        </div>
-
-        <div class="lg:col-span-6">
-          <div class="surface-card rounded-lg border border-medium overflow-hidden">
-            <div class="px-5 py-3.5 border-b border-hairline flex flex-wrap items-center justify-between gap-2">
-              <div class="flex items-center gap-2">
-                <span class="text-sm font-semibold ink-main">Cepheus star map (tap a star)</span>
-              </div>
-
-              <div class="flex items-center gap-1.5">
-                <button
-                  id="toggle-lines-btn"
-                  type="button"
-                  class="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium btn-primary"
-                >
-                  Lines
-                </button>
-                <button
-                  id="toggle-orbit-btn"
-                  type="button"
-                  class="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium btn-primary"
-                >
-                  Ring
-                </button>
-              </div>
-            </div>
-
-            <div id="star-map-box" class="relative w-full h-[310px] sm:h-[340px] surface-canvas cursor-pointer select-none">
-              <canvas id="star-map-canvas"></canvas>
-              <div id="north-star-pill" class="absolute top-3 left-3 px-3 py-1 rounded-md surface-alt/90 border border-hairline font-mono text-[11px] ink-main pointer-events-none tabular-nums">
-                North Star in 2026 AD: <strong class="ink-coral">Polaris</strong>
-              </div>
-            </div>
-
-            <div class="px-5 py-4 border-t border-hairline surface-alt space-y-2.5">
-              <div class="flex flex-wrap items-center justify-between gap-2">
-                <label for="wobble-slider" class="text-xs font-semibold ink-main flex items-center gap-2">
-                  <span>Earth's wobble over time</span>
-                  <button id="wobble-play-btn" type="button" class="px-2 py-0.5 rounded-md text-[10px] font-mono border border-medium hover:border-[var(--accent-gold)] ink-muted">
-                    Play
-                  </button>
-                </label>
-                <span id="wobble-year-badge" class="font-mono text-xs font-semibold px-2.5 py-0.5 rounded-md bg-[var(--accent-gold)]/20 ink-gold tabular-nums">
-                  2026 AD
-                </span>
-              </div>
-
-              <input
-                id="wobble-slider"
-                type="range"
-                min="2026"
-                max="7500"
-                step="10"
-                value="2026"
-                class="cool-slider"
-              />
-
-              <div class="flex justify-between font-mono text-[10px] ink-muted tabular-nums">
-                <span>2026 AD (Polaris)</span>
-                <span>4000 AD (Errai)</span>
-                <span>7500 AD (Alderamin)</span>
-              </div>
-            </div>
-
-            <div class="px-5 py-4 border-t border-hairline bg-[var(--bg-card)]">
-              <div class="flex items-start gap-3">
-                <div>
-                  <div class="flex flex-wrap items-center gap-2 mb-1">
-                    <span id="star-fact-badge" class="font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-md bg-[var(--accent-coral)]/15 ink-coral font-semibold">
-                      Namesake star
-                    </span>
-                    <span id="star-fact-dist" class="font-mono text-[11px] ink-muted">887 light-years away</span>
-                  </div>
-                  <p id="star-fact-text" class="text-xs sm:text-sm leading-relaxed ink-main font-medium">
-                    Delta Cephei pulses every 5.4 days. That rhythm is tied to its true brightness, which is how astronomers use stars like it to measure distances to other galaxies.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="playground" class="py-16 sm:py-24 border-t border-hairline">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
-        <div>
-          <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-tight ink-main">
-            Three simulations from our workshops
-          </h2>
-        </div>
-        <p class="text-sm ink-muted max-w-sm">
-          We use these in workshops. Drag, tap and move the sliders to see what changes.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6" role="tablist">
-        <button
-          type="button"
-          data-toy="toy1"
-          class="toy-tab text-left p-4 rounded-md border-2 border-[var(--accent-coral)] surface-alt transition-all"
-        >
-          <div class="flex items-center justify-between">
-            <span class="font-mono text-[11px] font-semibold uppercase tracking-wider ink-coral">Simulation 1</span>
-            <span class="text-xs font-mono ink-muted">Orbits</span>
-          </div>
-          <div class="font-display font-bold text-lg ink-main mt-1">Gravity assist</div>
-        </button>
-
-        <button
-          type="button"
-          data-toy="toy2"
-          class="toy-tab text-left p-4 rounded-md border border-hairline surface-card hover:border-[var(--accent-gold)] transition-all"
-        >
-          <div class="flex items-center justify-between">
-            <span class="font-mono text-[11px] font-semibold uppercase tracking-wider ink-muted">Simulation 2</span>
-            <span class="text-xs font-mono ink-muted">Variable stars</span>
-          </div>
-          <div class="font-display font-bold text-lg ink-main mt-1">Pulsing stars</div>
-        </button>
-
-        <button
-          type="button"
-          data-toy="toy3"
-          class="toy-tab text-left p-4 rounded-md border border-hairline surface-card hover:border-[var(--accent-gold)] transition-all"
-        >
-          <div class="flex items-center justify-between">
-            <span class="font-mono text-[11px] font-semibold uppercase tracking-wider ink-muted">Simulation 3</span>
-            <span class="text-xs font-mono ink-muted">Tunneling</span>
-          </div>
-          <div class="font-display font-bold text-lg ink-main mt-1">Quantum tunneling</div>
-        </button>
-      </div>
-
-      <div class="surface-card rounded-lg border border-medium p-5 sm:p-7">
-
-        <div id="toy1-panel" class="toy-panel space-y-5">
-          <div class="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <h3 class="font-display font-bold text-xl ink-main">Launch a probe</h3>
-              <p class="text-xs sm:text-sm ink-muted">
-                Click and drag to aim a probe. Gravity from the center body bends its path.
-              </p>
-            </div>
-
-            <div class="flex flex-wrap items-center gap-2">
-              <div class="inline-flex p-1 rounded-md border border-medium surface-alt">
-                <button type="button" id="grav-star-btn" class="px-3 py-1 rounded-md text-xs font-semibold btn-primary">
-                  Sun-like star
-                </button>
-                <button type="button" id="grav-bh-btn" class="px-3 py-1 rounded-md text-xs font-semibold ink-muted hover:ink-main">
-                  Black hole
-                </button>
-              </div>
-
-              <button type="button" id="grav-reset-btn" class="px-3.5 py-2 rounded-md text-xs font-mono font-medium btn-secondary">
-                Clear
-              </button>
-            </div>
-          </div>
-
-          <div id="grav-canvas-box" class="relative w-full h-[350px] sm:h-[400px] rounded-md overflow-hidden border border-hairline bg-[#0B101D] cursor-crosshair select-none touch-none">
-            <canvas id="grav-canvas"></canvas>
-
-            <div id="grav-status-pill" class="absolute top-3.5 left-3.5 px-3.5 py-1.5 rounded-md bg-[#161F33]/90 border border-[#D4B46A]/40 font-mono text-xs text-[#F4ECD8] backdrop-blur-xs">
-              Stable orbit
-            </div>
-
-            <div class="absolute top-3.5 right-3.5 px-3.5 py-1.5 rounded-md bg-[#161F33]/90 border border-[#F4ECD8]/15 font-mono text-xs text-[#D4B46A] tabular-nums">
-              Speed: <strong id="grav-speed-out">29.8 km/s</strong>
-            </div>
-
-            <div class="absolute bottom-3 left-3.5 right-3.5 flex flex-wrap justify-between gap-2 pointer-events-none font-mono text-[11px] text-[#B4BDD1]">
-              <span>Drag to launch</span>
-              <span id="grav-mass-label">Center: Sun-like star (1 solar mass)</span>
-            </div>
-          </div>
-        </div>
-
-        <div id="toy2-panel" class="toy-panel hidden space-y-5">
-          <div class="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <h3 class="font-display font-bold text-xl ink-main">Cepheid variables</h3>
-              <p class="text-xs sm:text-sm ink-muted">
-                Cepheid stars swell and shrink on a regular cycle. The longer the cycle, the brighter the star really is, which is how we use them to measure distances.
-              </p>
-            </div>
-
-            <div class="flex flex-wrap gap-2">
-              <button type="button" class="ceph-preset px-3 py-1.5 rounded-md text-xs font-semibold btn-primary" data-days="5.4" data-name="Delta Cephei" data-dist="887 light-years">
-                Delta Cephei (5.4d)
-              </button>
-              <button type="button" class="ceph-preset px-3 py-1.5 rounded-md text-xs font-semibold btn-secondary" data-days="4.0" data-name="Polaris" data-dist="433 light-years">
-                Polaris (4.0d)
-              </button>
-              <button type="button" class="ceph-preset px-3 py-1.5 rounded-md text-xs font-semibold btn-secondary" data-days="30.0" data-name="Andromeda Cepheid" data-dist="2.5 million light-years">
-                Andromeda Cepheid (30d)
-              </button>
-            </div>
-          </div>
-
-          <div class="p-4 rounded-md surface-alt border border-hairline space-y-2">
-            <div class="flex items-center justify-between">
-              <label for="ceph-period-slider" class="text-xs sm:text-sm font-semibold ink-main">
-                Pulse period
-              </label>
-              <span id="ceph-period-badge" class="font-mono text-xs font-semibold px-3 py-1 rounded-md bg-[var(--accent-coral)]/15 ink-coral tabular-nums">
-                5.4 days
-              </span>
-            </div>
-            <input id="ceph-period-slider" type="range" min="2" max="30" step="0.2" value="5.4" class="cool-slider" />
-            <div class="flex justify-between font-mono text-[10px] ink-muted">
-              <span>2 days</span>
-              <span>15 days</span>
-              <span>30 days</span>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
-            <div class="lg:col-span-5 rounded-md border border-hairline overflow-hidden bg-[#0B101D] flex flex-col">
-              <div class="px-4 py-2.5 border-b border-[#F4ECD8]/10 flex justify-between font-mono text-[11px] text-[#B4BDD1]">
-                <span id="ceph-star-title">Delta Cephei</span>
-                <span id="ceph-state-tag" class="text-[#D4B46A]">Expanding</span>
-              </div>
-              <div id="ceph-star-box" class="h-[240px]">
-                <canvas id="ceph-star-canvas"></canvas>
-              </div>
-            </div>
-
-            <div class="lg:col-span-7 rounded-md border border-hairline overflow-hidden surface-canvas flex flex-col">
-              <div class="px-4 py-2.5 border-b border-hairline flex justify-between font-mono text-[11px] ink-muted">
-                <span>Brightness over time</span>
-                <span class="ink-gold">Quick rise, slow fade</span>
-              </div>
-              <div id="ceph-curve-box" class="h-[240px]">
-                <canvas id="ceph-curve-canvas"></canvas>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
-            <div class="p-4 rounded-md surface-alt border border-hairline">
-              <div class="font-mono text-[10px] uppercase tracking-wider ink-muted">True Brightness</div>
-              <div id="ceph-lum-out" class="font-display font-bold text-xl ink-main mt-0.5 tabular-nums">2,000× brighter than Sun</div>
-            </div>
-            <div class="p-4 rounded-md surface-alt border border-hairline">
-              <div class="font-mono text-[10px] uppercase tracking-wider ink-muted">Star Diameter</div>
-              <div id="ceph-size-out" class="font-display font-bold text-xl ink-main mt-0.5 tabular-nums">45× wider than Sun</div>
-            </div>
-            <div class="p-4 rounded-md surface-alt border border-hairline">
-              <div class="font-mono text-[10px] uppercase tracking-wider ink-muted">Usable for distances up to</div>
-              <div id="ceph-reach-out" class="font-display font-bold text-xl ink-coral mt-0.5 tabular-nums">450,000 light-years</div>
-            </div>
-          </div>
-        </div>
-
-        <div id="toy3-panel" class="toy-panel hidden space-y-5">
-          <div class="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <h3 class="font-display font-bold text-xl ink-main">Quantum tunneling</h3>
-              <p class="text-xs sm:text-sm ink-muted">
-                A ball thrown at a wall always bounces back. A quantum particle behaves like a wave, and part of that wave can pass through.
-              </p>
-            </div>
-
-            <button type="button" id="q-fire-btn" class="px-4 py-2 rounded-md text-xs font-semibold btn-primary">
-              Fire again
-            </button>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 rounded-md surface-alt border border-hairline">
-            <div class="space-y-2">
-              <div class="flex justify-between text-xs font-semibold ink-main">
-                <label for="q-energy-slider">Particle Energy</label>
-                <span id="q-energy-badge" class="font-mono ink-coral tabular-nums">85% of barrier height</span>
-              </div>
-              <input id="q-energy-slider" type="range" min="40" max="125" step="5" value="85" class="cool-slider" />
-            </div>
-
-            <div class="space-y-2">
-              <div class="flex justify-between text-xs font-semibold ink-main">
-                <label for="q-width-slider">Barrier thickness</label>
-                <span id="q-width-badge" class="font-mono ink-gold tabular-nums">Thin Barrier</span>
-              </div>
-              <input id="q-width-slider" type="range" min="6" max="26" step="2" value="12" class="cool-slider" />
-            </div>
-          </div>
-
-          <div id="q-canvas-box" class="relative w-full h-[270px] sm:h-[300px] rounded-md overflow-hidden border border-hairline bg-[#0B101D]">
-            <canvas id="q-canvas"></canvas>
-            <div id="q-callout-pill" class="absolute top-3 left-3 px-3 py-1 rounded-md bg-[#161F33]/90 border border-[#D4B46A]/35 font-mono text-[11px] text-[#F4ECD8]">
-              Wave approaching the barrier
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="p-4 rounded-md surface-alt border border-hairline space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="text-xs font-semibold ink-muted">Reflected</span>
-                <span id="q-reflected-pct" class="font-mono text-base font-bold ink-main tabular-nums">100%</span>
-              </div>
-              <div class="w-full h-2.5 rounded-full bg-[var(--border-subtle)] overflow-hidden">
-                <div id="q-reflected-bar" class="h-full rounded-full bg-[var(--accent-gold)] transition-all duration-150" style="width: 100%;"></div>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-md surface-alt border border-hairline space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="text-xs font-semibold ink-muted">Passed through (tunneled)</span>
-                <span id="q-tunneled-pct" class="font-mono text-base font-bold ink-coral tabular-nums">0%</span>
-              </div>
-              <div class="w-full h-2.5 rounded-full bg-[var(--border-subtle)] overflow-hidden">
-                <div id="q-tunneled-bar" class="h-full rounded-full bg-[var(--accent-coral)] transition-all duration-150" style="width: 0%;"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="join" class="py-16 sm:py-24 border-t border-hairline">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="surface-card rounded-lg border border-medium p-6 sm:p-10 lg:p-12">
-
-        <div class="max-w-2xl mb-10">
-          <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-tight ink-main mb-3">
-            Help us run it
-          </h2>
-          <p class="text-sm sm:text-base leading-relaxed ink-muted">
-            You don't need a physics background. If you like telescopes, design, video, code or organizing events, there is something for you.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-
-          <div class="lg:col-span-5 space-y-3">
-            <div class="font-mono text-xs uppercase tracking-wider ink-muted mb-2">
-              1. Choose a role
-            </div>
-
-            <button
-              type="button"
-              data-role="Workshop & Camp Mentor"
-              class="crew-role-card w-full text-left p-4 rounded-md border-2 border-[var(--accent-coral)] surface-alt transition-all"
-            >
-              <div class="flex items-center justify-between">
-                <span class="font-display font-bold text-base ink-main">Workshop &amp; Camp Mentor</span>
-                <span class="role-check-badge font-mono text-[10px] px-2 py-0.5 rounded-md bg-[var(--accent-coral)] text-white">Selected</span>
-              </div>
-              <p class="text-xs ink-muted mt-1">Lead hands-on activities, water rocket launches and camp groups.</p>
-            </button>
-
-            <button
-              type="button"
-              data-role="Design & Social Media"
-              class="crew-role-card w-full text-left p-4 rounded-md border border-hairline hover:border-[var(--accent-gold)] surface-alt transition-all"
-            >
-              <div class="flex items-center justify-between">
-                <span class="font-display font-bold text-base ink-main">Design &amp; Social Media</span>
-                <span class="role-check-badge hidden font-mono text-[10px] px-2 py-0.5 rounded-md bg-[var(--accent-coral)] text-white">Selected</span>
-              </div>
-              <p class="text-xs ink-muted mt-1">Make posters, short videos and explainers.</p>
-            </button>
-
-            <button
-              type="button"
-              data-role="Telescope & Sky Guide"
-              class="crew-role-card w-full text-left p-4 rounded-md border border-hairline hover:border-[var(--accent-gold)] surface-alt transition-all"
-            >
-              <div class="flex items-center justify-between">
-                <span class="font-display font-bold text-base ink-main">Telescope &amp; Sky Guide</span>
-                <span class="role-check-badge hidden font-mono text-[10px] px-2 py-0.5 rounded-md bg-[var(--accent-coral)] text-white">Selected</span>
-              </div>
-              <p class="text-xs ink-muted mt-1">Help visitors find planets, craters and nebulae through the telescope.</p>
-            </button>
-
-            <button
-              type="button"
-              data-role="Events & Outreach"
-              class="crew-role-card w-full text-left p-4 rounded-md border border-hairline hover:border-[var(--accent-gold)] surface-alt transition-all"
-            >
-              <div class="flex items-center justify-between">
-                <span class="font-display font-bold text-base ink-main">Events &amp; Outreach</span>
-                <span class="role-check-badge hidden font-mono text-[10px] px-2 py-0.5 rounded-md bg-[var(--accent-coral)] text-white">Selected</span>
-              </div>
-              <p class="text-xs ink-muted mt-1">Plan school visits, pop-ups and star nights.</p>
-            </button>
-          </div>
-
-          <div class="lg:col-span-7">
-            <div class="p-6 sm:p-8 rounded-lg surface-alt border border-hairline">
-              <form id="crew-form" class="space-y-4" novalidate>
-                <div class="font-mono text-xs uppercase tracking-wider ink-muted mb-1">
-                  2. Tell us about yourself
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label for="crew-name" class="block text-xs font-semibold ink-main mb-1.5">
-                      Name <span class="ink-coral">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="crew-name"
-                      required
-                      placeholder="Aarav"
-                      class="w-full px-4 py-3 rounded text-sm surface-card border border-hairline focus:border-[var(--accent-coral)] focus:outline-none ink-main"
-                    />
-                  </div>
-
-                  <div>
-                    <label for="crew-contact" class="block text-xs font-semibold ink-main mb-1.5">
-                      Email or handle <span class="ink-coral">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="crew-contact"
-                      required
-                      placeholder="you@email.com or @handle"
-                      class="w-full px-4 py-3 rounded text-sm surface-card border border-hairline focus:border-[var(--accent-coral)] focus:outline-none ink-main"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label for="crew-role-select" class="block text-xs font-semibold ink-main mb-1.5">
-                    Role
-                  </label>
-                  <select
-                    id="crew-role-select"
-                    class="w-full px-4 py-3 rounded text-sm surface-card border border-hairline focus:border-[var(--accent-coral)] focus:outline-none ink-main"
-                  >
-                    <option value="Workshop & Camp Mentor">Workshop &amp; Camp Mentor</option>
-                    <option value="Design & Social Media">Design &amp; Social Media</option>
-                    <option value="Telescope & Sky Guide">Telescope &amp; Sky Guide</option>
-                    <option value="Events & Outreach">Events &amp; Outreach</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label for="crew-curiosity" class="block text-xs font-semibold ink-main mb-1.5">
-                    Why are you interested? <span class="ink-coral">*</span>
-                  </label>
-                  <textarea
-                    id="crew-curiosity"
-                    rows="3"
-                    required
-                    placeholder="A sentence or two is fine."
-                    class="w-full px-4 py-3 rounded text-sm surface-card border border-hairline focus:border-[var(--accent-coral)] focus:outline-none ink-main"
-                  ></textarea>
-                </div>
-
-                <div id="crew-form-error" class="hidden p-3 rounded bg-[#D97742]/15 border border-[#D97742]/40 text-xs font-medium ink-coral">
-                  Please fill in your name, a way to reach you, and a sentence about why you're interested.
-                </div>
-
-                <button type="submit" class="w-full sm:w-auto px-7 py-3.5 rounded-md text-sm font-semibold btn-primary">
-                  Send
-                </button>
-              </form>
-
-              <div id="crew-pass-card" class="hidden space-y-4">
-                <h3 class="font-display font-bold text-xl ink-main">Thanks, <span id="pass-holder-name"></span>.</h3>
-                <p class="text-sm leading-relaxed ink-muted">
-                  Your email app should have opened with a message to hello@cephei.org. Send it and we will get back to you.
-                  If nothing opened, write to us at <a href="mailto:hello@cephei.org" class="underline">hello@cephei.org</a>.
-                </p>
-                <button type="button" id="reset-pass-btn" class="px-4 py-2 rounded-md text-sm font-semibold btn-secondary">Edit details</button>
-              </div>
-            </div>
-          </div>
-
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>Physics and astrophysics, taught where students are.</h1>
+        <p class="lead">CEPHEI teaches physics and astrophysics, runs camps at schools, and works to raise awareness about science in our community.</p>
+        <div class="buttons">
+          <a class="btn" href="programs.html">What we do</a>
+          <a class="btn plain" href="contact.html">Get in touch</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="border-t border-hairline py-10">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs ink-muted">
-      <div class="flex items-center gap-2.5">
-        <span class="font-display font-bold tracking-[0.22em] uppercase ink-main">CEPHEI</span>
-        <span>·</span>
-        <span>Nonprofit physics and astronomy group</span>
+    <section class="section">
+      <div class="wrap">
+        <h2>What we do</h2>
+        <div class="columns">
+          <div>
+            <h3>Teaching</h3>
+            <p>Classes and workshops on physics and astrophysics. We start from the basics and explain things in plain language.</p>
+            <p><a href="programs.html#teaching">More about teaching</a></p>
+          </div>
+          <div>
+            <h3>School camps</h3>
+            <p>We plan to run camps at schools, with hands-on activities and time spent looking at the sky.</p>
+            <p><a href="programs.html#camps">More about camps</a></p>
+          </div>
+          <div>
+            <h3>Awareness</h3>
+            <p>Talks and small public events that show people science is something they can take part in.</p>
+            <p><a href="programs.html#awareness">More about awareness</a></p>
+          </div>
+        </div>
       </div>
-      <div class="flex items-center gap-5 font-mono">
-        <a href="sessions.html" class="hover:ink-main">Sessions</a>
-        <a href="#playground" class="hover:ink-main">Simulations</a>
-        <a href="mailto:hello@cephei.org" class="hover:ink-coral">hello@cephei.org</a>
+    </section>
+
+    <section class="section tint">
+      <div class="wrap">
+        <div class="read">
+          <h2>Where we are right now</h2>
+          <p>CEPHEI is just getting started. We have not announced dates or locations yet. When we do, they will be posted here.</p>
+          <p>If you are a student, a parent or a teacher and want to hear about it first, send us a message.</p>
+          <div class="buttons">
+            <a class="btn" href="contact.html">Get in touch</a>
+          </div>
+        </div>
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>CEPHEI &middot; Physics and astrophysics education</div>
+      <nav aria-label="Footer"><a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">What we do</a><a href="contact.html">Get in touch</a></nav>
+      <div data-contact-email></div>
     </div>
   </footer>
 
-  <div id="toast-pill" class="fixed bottom-5 right-5 z-50 hidden px-4 py-3 rounded-md bg-[#131A2C] text-[#F4ECD8] border border-[#B59A5B] shadow-xl text-xs font-medium flex items-center gap-2.5">
-    <span class="w-2 h-2 rounded-full bg-[#D97742]"></span>
-    <span id="toast-text">Saved!</span>
-  </div>
-
-  <script src="js/theme.js"></script>
-  <script src="js/starmap.js"></script>
-  <script src="js/simulations.js"></script>
-  <script src="js/join.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/site.js"></script>
 </body>
 </html>
