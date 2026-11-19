@@ -12,7 +12,7 @@ A plain HTML/CSS/JS skeleton. No build step and no dependencies: open `index.htm
 
 ## To fill in as things become real
 - [ ] Set `CONTACT_EMAIL` at the top of `js/site.js`. Until then the form does not send anything and the footer says "Contact email coming soon".
-- [ ] `about.html`: team introductions.
+- [x] `about.html`: team listed (add any more roles or short bios as they come).
 - [ ] `programs.html`: class schedule and age groups, camp format, any events.
 - [ ] Add photos once there are some from real sessions.
 - [ ] Replace the "just getting started" box on the home page with real dates when there are any.
