@@ -234,3 +234,21 @@ input:focus, select:focus, textarea:focus { outline: 0; border-color: var(--blue
   .footer nav { grid-column: 5 / span 5; }
   .footer .where { grid-column: 10 / span 3; text-align: right; }
 }
+
+/* ---------- Kant section (home) ---------- */
+
+.kant { background: var(--paper); }
+.kant .page { display: grid; gap: 2rem; padding-top: clamp(3rem, 6vw, 5rem); padding-bottom: clamp(3rem, 6vw, 5rem); }
+@media (min-width: 56rem) {
+  .kant .page { grid-template-columns: repeat(12, 1fr); column-gap: 1.5rem; align-items: center; }
+  .portrait { grid-column: 1 / span 4; }
+  .kant-text { grid-column: 6 / span 7; }
+}
+.portrait { margin: 0; max-width: 24rem; }
+.portrait img { display: block; width: 100%; height: auto; background: var(--navy); border: 1.5px solid var(--navy); }
+.portrait figcaption { margin-top: 0.6rem; font-size: 0.9rem; color: var(--on-light); }
+.kant blockquote { margin: 0 0 1.6rem; padding-left: 1.2rem; border-left: 4px solid var(--gold); }
+.kant blockquote p { font-family: var(--display); font-weight: 600; font-size: clamp(1.45rem, 1rem + 1.5vw, 2.25rem); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 0.9rem; }
+.kant blockquote footer { font-size: 0.95rem; color: var(--on-light); }
+.kant blockquote cite { font-style: italic; }
+.kant-text > p { max-width: var(--measure); }
